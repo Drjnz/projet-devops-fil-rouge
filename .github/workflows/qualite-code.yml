@@ -21,11 +21,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: Installer les dépendances
+      - name: Installer les dépendances (ESLint, Prettier, etc.)
         run: npm install
 
-      - name: Lancer ESLint
-        run: npx eslint .
-
-      - name: Vérifier le format avec Prettier
-        run: npx prettier --check .
+      - name: Lancer notre policier du code
+        run: npm run lint
