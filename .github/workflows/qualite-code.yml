@@ -7,6 +7,8 @@ on:
   pull_request:
     branches: ["main"]
 
+
+
 # 2. Que doit faire le serveur ?
 jobs:
   lint:
@@ -26,3 +28,6 @@ jobs:
 
       - name: Lancer notre policier du code
         run: npm run lint
+
+      - name: Lancer les tests automatisés
+        run: npm run test
