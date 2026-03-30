@@ -30,4 +30,10 @@ jobs:
         run: npm run lint
 
       - name: Lancer les tests automatisés
-        run: npm run test
+        run: npm test -- --coverage
+
+      - name: Déployer mon site web
+        uses: actions/upload-artifact@v4
+        with:
+          name: mon-site-web
+          path: index.html
